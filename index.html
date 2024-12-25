@@ -1,37 +1,16 @@
-       async function sendMessage() {
+        function sendMessage() {
             const chatBox = document.getElementById('chat-box');
             const userInput = document.getElementById('chat-input').value;
             const userMessage = `<div><strong>You:</strong> ${userInput}</div>`;
             chatBox.innerHTML += userMessage;
 
-            const typingIndicator = `<div><em>Lexor AI is typing...</em></div>`;
-            chatBox.innerHTML += typingIndicator;
-
-            try {
-                const response = await fetch('https://api.openai.com/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-4",
-                        messages: [
-                            { role: "system", content: "You are Lexor AI, a helpful cryptocurrency assistant." },
-                            { role: "user", content: userInput }
-                        ],
-                        max_tokens: 150
-                    })
-                });
-                const data = await response.json();
-                const aiResponse = `<div><strong>Lexor AI:</strong> ${data.choices[0].message.content.trim()}</div>`;
-                chatBox.innerHTML = chatBox.innerHTML.replace(typingIndicator, aiResponse);
-            } catch (error) {
-                chatBox.innerHTML = chatBox.innerHTML.replace(typingIndicator, '<div><strong>Lexor AI:</strong> Sorry, I am currently unable to process your request.</div>');
-            }
+            setTimeout(() => {
+                const aiResponse = `<div><strong>Lexor AI:</strong> I'm here to help! Let's dive into ${userInput}.</div>`;
+                chatBox.innerHTML += aiResponse;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
 
             document.getElementById('chat-input').value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
         }
     </script>
 </head>
