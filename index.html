@@ -1,3 +1,5 @@
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lexor AI - Revolutionizing Cryptocurrency Markets with AI Intelligence">
@@ -139,58 +141,67 @@
             from { opacity: 0; transform: translateY(-40px); }
             to { opacity: 1; transform: translateY(0); }
         }
+    </style>
+    <script>
         function sendMessage() {
             const chatBox = document.getElementById('chat-box');
             const userInput = document.getElementById('chat-input').value;
-            const userMessage = `<div><strong>You:</strong> ${userInput}</div>`;
+            const userMessage = <div><strong>You:</strong> ${userInput}</div>;
             chatBox.innerHTML += userMessage;
 
             setTimeout(() => {
-                const aiResponse = `<div><strong>Lexor AI:</strong> I'm here to help! Let's dive into ${userInput}.</div>`;
+                const aiResponse = <div><strong>Lexor AI:</strong> I'm here to help! Let's dive into ${userInput}.</div>;
                 chatBox.innerHTML += aiResponse;
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
 
             document.getElementById('chat-input').value = '';
         }
-    </style>
-    <script>
-        async function sendMessage() {
-            const chatBox = document.getElementById('chat-box');
-            const userInput = document.getElementById('chat-input').value;
-            const userMessage = `<div><strong>You:</strong> ${userInput}</div>`;
-            chatBox.innerHTML += userMessage;
-
-            const typingIndicator = `<div id='typing'><em>Lexor AI is typing...</em></div>`;
-            chatBox.innerHTML += typingIndicator;
-
-            try {
-                const response = await fetch('https://api.openai.com/v1/chat/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
-                    },
-                    body: JSON.stringify({
-                        model: "gpt-4",
-                        messages: [
-                            { role: "system", content: "You are Lexor AI, a cryptocurrency assistant providing market insights." },
-                            { role: "user", content: userInput }
-                        ],
-                        max_tokens: 150
-                    })
-                });
-                const data = await response.json();
-                document.getElementById('typing').remove();
-                const aiResponse = `<div><strong>Lexor AI:</strong> ${data.choices[0].message.content.trim()}</div>`;
-                chatBox.innerHTML += aiResponse;
-            } catch (error) {
-                document.getElementById('typing').remove();
-                const errorMessage = `<div><strong>Lexor AI:</strong> Sorry, I am unable to process your request at the moment. Let's try again later.</div>`;
-                chatBox.innerHTML += errorMessage;
-            }
-
-            document.getElementById('chat-input').value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-        
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lexor AI Agent</h1>
+        <p>by Sacred AI Systems</p>
+        <p>The Future of AI-driven Cryptocurrency Management</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#chat">Chat with Lexor AI</a>
+    </nav>
+    <section id="about" class="section">
+        <h2>About Lexor AI</h2>
+        <p>Lexor AI leverages machine learning and blockchain insights to provide real-time crypto trading strategies, portfolio management, and risk analysis.</p>
+    </section>
+    <section id="features" class="section">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Real-Time Analytics</h3>
+                <p>Analyze the crypto market in real-time with AI-powered analytics tools.</p>
+            </div>
+            <div class="feature">
+                <h3>Portfolio Optimization</h3>
+                <p>Optimize your investments with predictive modeling and machine learning insights.</p>
+            </div>
+            <div class="feature">
+                <h3>Risk Management</h3>
+                <p>Identify potential risks and safeguard your investments through AI predictions.</p>
+            </div>
+        </div>
+    </section>
+    <section id="chat" class="section">
+        <h2>Chat with Lexor AI</h2>
+        <div class="chat-container">
+            <img src="/mnt/data/A_futuristic_AI_agent_named_Lexor,_symbolizing_int.png" alt="Lexor AI Agent" style="max-width: 300px; margin-bottom: 2rem; display: block; margin-left: auto; margin-right: auto;">
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" class="chat-input" id="chat-input" placeholder="Ask Lexor AI anything...">
+            <button class="chat-button" onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Lexor AI Agent by Sacred AI Systems. Innovating the Future of Crypto.</p>
+    </footer>
+</body>
+</html>
