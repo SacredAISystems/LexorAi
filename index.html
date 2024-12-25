@@ -5,150 +5,149 @@
     <meta name="description" content="Lexor AI - Revolutionizing Cryptocurrency Markets with AI Intelligence">
     <meta name="keywords" content="AI, Cryptocurrency, Blockchain, Trading, Automation">
     <meta name="author" content="Lexor AI Team">
-    <title>Lexor AI - Revolutionizing Cryptocurrency</title>
+    <title>Lexor AI - Your Futuristic Crypto Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #0d1117;
+            color: #e6edf3;
+            overflow-x: hidden;
         }
         header {
-            background: linear-gradient(135deg, #1a1f36, #34495e);
+            background: linear-gradient(135deg, #1f2937, #3b4252);
             color: white;
-            padding: 5rem 1rem;
+            padding: 10rem 1rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         header h1 {
             margin: 0;
-            font-size: 5rem;
-            letter-spacing: 3px;
+            font-size: 7rem;
+            letter-spacing: 4px;
             animation: fadeIn 2s ease-in-out;
         }
         header p {
-            margin: 1.5rem 0 0;
-            font-size: 1.8rem;
+            margin: 3rem 0 0;
+            font-size: 2.5rem;
             font-weight: 300;
             animation: fadeIn 3s ease-in-out;
         }
         nav {
-            background: #1a1f36;
-            padding: 1.5rem;
+            background: #161b22;
+            padding: 2rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
         nav a {
-            color: white;
+            color: #58a6ff;
             text-decoration: none;
-            margin: 0 3rem;
+            margin: 0 4rem;
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
         }
         nav a:hover {
-            text-shadow: 0 0 8px #a0c4ff;
+            text-shadow: 0 0 20px #58a6ff;
         }
         .section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
+            padding: 10rem 2rem;
+            max-width: 1600px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
         }
         .section h2 {
-            color: #1a1f36;
-            font-size: 3.5rem;
-            letter-spacing: 1px;
+            font-size: 5rem;
+            color: #58a6ff;
+            margin-bottom: 3rem;
         }
         .features {
             display: flex;
             flex-wrap: wrap;
-            gap: 3rem;
+            gap: 6rem;
             justify-content: center;
         }
         .feature {
-            background: white;
-            padding: 3.5rem;
-            border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-            flex: 1 1 calc(33.333% - 3rem);
+            background: #161b22;
+            padding: 5rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(88, 166, 255, 0.25);
+            flex: 1 1 calc(30% - 5rem);
             box-sizing: border-box;
-            transition: all 0.4s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            position: relative;
         }
         .feature:hover {
-            transform: translateY(-14px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            box-shadow: 0 25px 60px rgba(88, 166, 255, 0.35);
         }
         .feature h3 {
-            color: #34495e;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            color: #58a6ff;
         }
         .feature p {
-            font-size: 1.3rem;
-            line-height: 1.9;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
         }
         .chat-container {
-            max-width: 1000px;
-            margin: 5rem auto;
-            background: #fff;
-            padding: 4rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            max-width: 1400px;
+            margin: 10rem auto;
+            background: #161b22;
+            padding: 6rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(88, 166, 255, 0.2);
+            position: relative;
         }
         .chat-box {
             width: 100%;
-            height: 450px;
-            border: 1px solid #ddd;
-            padding: 2rem;
+            height: 700px;
+            border: none;
+            background: #0d1117;
+            padding: 4rem;
             overflow-y: auto;
-            margin-bottom: 2rem;
-            border-radius: 15px;
+            margin-bottom: 3rem;
+            border-radius: 20px;
+            color: white;
+            font-size: 1.5rem;
         }
         .chat-input {
-            width: calc(100% - 150px);
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 15px;
+            width: calc(100% - 240px);
+            padding: 2rem;
+            border: 1px solid #58a6ff;
+            border-radius: 20px;
+            background: #0d1117;
+            color: white;
+            font-size: 1.5rem;
         }
         .chat-button {
-            padding: 1.5rem 3rem;
+            padding: 2rem 5rem;
             border: none;
-            background: #1a1f36;
+            background: #58a6ff;
             color: white;
-            border-radius: 15px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
         .chat-button:hover {
-            background: #34495e;
+            background: #4096d1;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-30px); }
+            from { opacity: 0; transform: translateY(-40px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
-    <script>
-        function sendMessage() {
-            const chatBox = document.getElementById('chat-box');
-            const userInput = document.getElementById('chat-input').value;
-            const userMessage = `<div><strong>You:</strong> ${userInput}</div>`;
-            chatBox.innerHTML += userMessage;
-
-            setTimeout(() => {
-                const aiResponse = `<div><strong>Lexor AI:</strong> I am processing your question about '${userInput}'... Here's what I found!</div>`;
-                chatBox.innerHTML += aiResponse;
-            }, 1500);
-
-            document.getElementById('chat-input').value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    </script>
 </head>
 <body>
     <header>
         <h1>Lexor AI</h1>
-        <p>Transforming Cryptocurrency Markets with Cutting-Edge AI</p>
+        <p>The Future of AI-driven Cryptocurrency Management</p>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -157,9 +156,7 @@
     </nav>
     <section id="about" class="section">
         <h2>About Lexor AI</h2>
-        <p>
-            Lexor AI blends machine learning, predictive analytics, and blockchain insights to empower cryptocurrency investors and developers. Lexor adapts dynamically to market trends, offering precision-driven data and personalized recommendations.
-        </p>
+        <p>Lexor AI leverages machine learning and blockchain insights to provide real-time crypto trading strategies, portfolio management, and risk analysis.</p>
     </section>
     <section id="chat" class="section">
         <h2>Chat with Lexor AI</h2>
@@ -170,7 +167,7 @@
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 Lexor AI. Redefining the Future of Blockchain and AI.</p>
+        <p>&copy; 2024 Lexor AI. Innovating the Future of Crypto.</p>
     </footer>
 </body>
 </html>
