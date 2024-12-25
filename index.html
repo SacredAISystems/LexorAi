@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lexor AI - Revolutionizing Cryptocurrency Markets with AI Intelligence">
+    <meta name="keywords" content="AI, Cryptocurrency, Blockchain, Trading, Automation">
+    <meta name="author" content="Lexor AI Team">
+    <title>Lexor AI - Revolutionizing Cryptocurrency</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 4rem;
+        }
+        header p {
+            margin: 1rem 0 0;
+            font-size: 1.5rem;
+        }
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section h2 {
+            color: #2c3e50;
+            font-size: 3rem;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .feature {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 3rem);
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .feature h3 {
+            color: #34495e;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+        .feature p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .feature button {
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            color: white;
+            background: #2c3e50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .feature button:hover {
+            background: #1f2c38;
+        }
+        .result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function displayFeatureInfo(feature) {
+            const result = document.getElementById('result-' + feature);
+            result.innerHTML = `\n                <strong>${feature} in Action:</strong> Lexor AI continuously monitors market conditions, adapting to new trends with unmatched precision.\n                Through predictive analytics, users can proactively adjust their strategies for optimal performance.`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lexor AI</h1>
+        <p>Transforming Cryptocurrency Markets with Next-Level AI</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about" class="section">
+        <h2>About Lexor AI</h2>
+        <p>
+            Lexor AI leverages advanced machine learning algorithms and neural networks to streamline cryptocurrency trading and blockchain development. By offering cutting-edge insights and predictive modeling, Lexor empowers users to maximize their potential in the evolving digital economy.
+        </p>
+    </section>
+    <section id="features" class="section">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Real-Time Market Analytics</h3>
+                <p>Lexor AI interprets and predicts market fluctuations, providing unparalleled insights.</p>
+                <button onclick="displayFeatureInfo('Market Analytics')">Discover More</button>
+                <div class="result" id="result-Market Analytics"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Lexor AI. Innovating the Future of Cryptocurrency.</p>
+    </footer>
+</body>
+</html>
